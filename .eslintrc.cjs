@@ -1,0 +1,76 @@
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:import/recommended',
+    'prettier',
+    'plugin:prettier/recommended',
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: { jsx: true },
+  },
+  ignorePatterns: [
+    'node_modules',
+    'dist',
+    '.eslintrc.cjs',
+    '.prettierrc',
+    'rsbuild.config.mjs',
+  ],
+  settings: {
+    react: { version: 'detect' },
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src'],
+          ['@app', './src/app'],
+          ['@router', './src/router'],
+          ['@pages', './src/pages'],
+          ['@components', './src/components'],
+          ['@containers', './src/containers'],
+          ['@hooks', './src/hooks'],
+          ['@utils', './src/utils'],
+          ['@helpers', './src/helpers'],
+          ['@services', './src/services'],
+          ['@data', './src/data'],
+          ['@assets', './src/assets'],
+          ['@themes', './src/themes'],
+          ['@configs', './src/configs'],
+          ['@constants', './src/constants'],
+          ['@public', './public'],
+        ],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+      },
+    },
+  },
+  plugins: ['react-refresh', 'react-hooks', 'prettier', 'import'],
+  rules: {
+    'import/no-unresolved': 'warn',
+    'no-unused-vars': 'warn',
+    'no-var': 'warn',
+    'no-console': 'warn',
+    'prefer-const': 'warn',
+    'react/jsx-no-target-blank': 'off',
+    'react/prop-types': 'off',
+    'react-refresh/only-export-components': [
+      'warn',
+      {
+        allowConstantExport: true,
+      },
+    ],
+    'prettier/prettier': [
+      'warn',
+      { endOfLine: 'auto' },
+      { usePrettierrc: true },
+    ],
+  },
+};

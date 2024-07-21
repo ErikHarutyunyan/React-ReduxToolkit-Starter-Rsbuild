@@ -1,0 +1,7 @@
+# Lock files
+**/.git
+**/dist
+**/node_modules
+**/package-lock.json
+**/yarn-lock.json
+**/pnpm-lock.yaml
