@@ -33,8 +33,8 @@ Make sure you have the following software installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/react-redux-starter.git
-   cd react-redux-starter
+   git clone https://github.com/ErikHarutyunyan/React-ReduxToolkit-Starter-Rsbuild.git
+   cd React-ReduxToolkit-Starter-Rsbuild
 	 ```
 2.  Install dependencies:
 
