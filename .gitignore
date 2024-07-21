@@ -1,0 +1,133 @@
+# Node modules
+node_modules/
+
+#Lock
+package-lock.json
+yarn.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+debug.log
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+dist/
+build/
+.vite/
+
+# VS Code directories and files
+.vscode/
+.history/
+
+# JetBrains IDEs directories and files
+.idea/
+*.iml
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux system files
+*~
+
+# IDE and editor directories and files
+/.idea/
+/.vscode/
+/.vscode-test/
+/.history/
+
+# Local WebStorm config
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLinters
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/httpRequests
+.idea/markdown-navigator.xml
+
+# IntelliJ IDEs
+*.iws
+*.ipr
+
+# Miscellaneous
+.sass-cache/
+connect.lock
+coverage/
+lib-cov/
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+*.lock
+*.zip
+*.cache
+*.scss-cache
+*.js.map
+*.ts.map
+*.tmp
+*.bak
+*.old
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+test/coverage/
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt/
+
+# Bower dependency directory (https://bower.io/)
+bower_components/
+
+# Compiled files
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Serverless directories
+.serverless/
+
+# Generated folders
+.cache
+
+# NPM token
+.npmrc
+
+# million package
+.million
