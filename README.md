@@ -94,7 +94,7 @@ Make sure you have the following software installed:
 
 	```properties  
 	npm run lint
-  npm run format
+  	npm run format
 	npm run check
 	```
         
