@@ -6,7 +6,7 @@ import { logout } from '@app/features/user/userSlice';
 
 import TokenService from '@services/token.service';
 
-import router from './router';
+import { router } from './router';
 
 function App() {
   const user = TokenService.getUser() || null;
