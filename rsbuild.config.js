@@ -1,10 +1,9 @@
-import { defineConfig } from '@rsbuild/core';
-import { pluginImageCompress } from '@rsbuild/plugin-image-compress';
-import { pluginReact } from '@rsbuild/plugin-react';
-import { pluginStyledComponents } from '@rsbuild/plugin-styled-components';
-import { pluginSvgr } from '@rsbuild/plugin-svgr';
+import { defineConfig } from '@rsbuild/core'
+import { pluginImageCompress } from '@rsbuild/plugin-image-compress'
+import { pluginReact } from '@rsbuild/plugin-react'
+import { pluginStyledComponents } from '@rsbuild/plugin-styled-components'
+import { pluginSvgr } from '@rsbuild/plugin-svgr'
 
-// import { pluginLightningcss } from '@rsbuild/plugin-lightningcss';
 // import { pluginGoogleAnalytics } from 'rsbuild-plugin-google-analytics';
 // import { pluginOpenGraph } from 'rsbuild-plugin-open-graph';
 
@@ -14,11 +13,11 @@ function getTools() {
     process.env.MILLION_LINT === 'true' ||
     process.env.MILLION_COMPILER === 'true' ||
     process.env.GZIP === 'true' ||
-    process.env.BROTLI === 'true';
+    process.env.BROTLI === 'true'
 
   // If no environment variables are set, return an empty object
   if (!hasEnvVars) {
-    return {};
+    return {}
   }
 
   return {
@@ -27,19 +26,19 @@ function getTools() {
       if (process.env.RSDOCTOR === 'true') {
         const { RsdoctorRspackPlugin } = await import(
           '@rsdoctor/rspack-plugin'
-        );
-        appendPlugins(new RsdoctorRspackPlugin({}));
+        )
+        appendPlugins(new RsdoctorRspackPlugin({}))
       }
       if (process.env.MILLION_LINT === 'true') {
-        const { rspack } = await import('@million/lint');
-        appendPlugins(rspack());
+        const { rspack } = await import('@million/lint')
+        appendPlugins(rspack())
       }
       if (process.env.MILLION_COMPILER === 'true') {
-        const { rspack } = await import('million/compiler');
-        appendPlugins(rspack({ auto: true }));
+        const { rspack } = await import('million/compiler')
+        appendPlugins(rspack({ auto: true }))
       }
       if (process.env.GZIP === 'true') {
-        const CompressionPlugin = await import('compression-webpack-plugin');
+        const CompressionPlugin = await import('compression-webpack-plugin')
         appendPlugins(
           new CompressionPlugin({
             algorithm: 'gzip',
@@ -48,10 +47,10 @@ function getTools() {
             minRatio: 0.8, // Only compress if the ratio is lower than 0.8
             deleteOriginalAssets: true, // Delete the original uncompressed files
           }),
-        );
+        )
       }
       if (process.env.BROTLI === 'true') {
-        const CompressionPlugin = await import('compression-webpack-plugin');
+        const CompressionPlugin = await import('compression-webpack-plugin')
         appendPlugins(
           new CompressionPlugin({
             algorithm: 'brotliCompress',
@@ -61,10 +60,10 @@ function getTools() {
             minRatio: 0.8, // Only compress if the ratio is lower than 0.8
             deleteOriginalAssets: true, // Delete the original uncompressed files
           }),
-        );
+        )
       }
     },
-  };
+  }
 }
 
 export default defineConfig({
@@ -77,7 +76,6 @@ export default defineConfig({
       { use: 'pngLossless', minQuality: 50 }, // Compress PNG images
       'ico', // Compress ICO images
     ]),
-    // pluginLightningcss(), // LightningCSS plugin for faster CSS processing
     // pluginGoogleAnalytics({
     //   // replace this with your Google tag ID
     //   // see: https://support.google.com/analytics/answer/9539598?hl=en
@@ -141,15 +139,15 @@ export default defineConfig({
     bundleAnalyze:
       process.env.BUNDLE_ANALYZE === 'true'
         ? {
-            analyzerMode: 'server',
-            openAnalyzer: true, // Enable bundle analysis in server mode
-          }
+          analyzerMode: 'server',
+          openAnalyzer: true, // Enable bundle analysis in server mode
+        }
         : {
-            analyzerMode: 'disabled', // Disable bundle analysis
-          },
+          analyzerMode: 'disabled', // Disable bundle analysis
+        },
     removeConsole: process.env.MODE === 'dev' ? false : ['log', 'warn'], // Remove console logs and warnings in production
   },
   server: {
     // port: 5173, // Optional: Specify development server port
   },
-});
+})
