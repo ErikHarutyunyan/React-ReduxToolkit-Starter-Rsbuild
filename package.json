@@ -1,66 +1,65 @@
 {
-  "name": "client",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "build": "rsbuild build",
-    "dev": "rsbuild dev --open",
-    "preview": "rsbuild preview",
-    "format": "biome format . --write",
-    "lint": "biome lint . --write",
-    "check": "biome check . --write",
-    "component": "generate-react component",
-    "page": "generate-react component  --type=page",
-    "layout": "generate-react component  --type=layout",
-    "redux": "generate-react component  --type=redux",
-    "generate-sitemap": "node generate-sitemap.cjs",
-    "prepare": "husky install",
-    "init-husky": "npx husky-init",
-    "test": "npx lint-staged"
-  },
-  "dependencies": {
-    "@hookform/resolvers": "^3.6.0",
-    "@million/lint": "^1.0.0-rc.81",
-    "@reduxjs/toolkit": "^2.2.5",
-    "axios": "^1.7.2",
-    "dayjs": "^1.11.11",
-    "jwt-decode": "^4.0.0",
-    "million": "^3.1.11",
-    "react": "19.0.0-rc-01172397-20240716",
-    "react-dom": "19.0.0-rc-01172397-20240716",
-    "react-error-boundary": "^4.0.13",
-    "react-hook-form": "^7.51.5",
-    "react-redux": "^9.1.2",
-    "react-router-dom": "^6.25.1",
-    "sharp": "^0.33.4",
-    "styled-components": "^6.1.12",
-    "yup": "^1.4.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@rsbuild/core": "1.0.1-beta.3",
-    "@rsbuild/plugin-babel": "^1.0.1-beta.3",
-    "@rsbuild/plugin-image-compress": "^1.0.1",
-    "@rsbuild/plugin-lightningcss": "^1.0.1-beta.3",
-    "@rsbuild/plugin-react": "1.0.1-beta.3",
-    "@rsbuild/plugin-styled-components": "^1.0.1-beta.3",
-    "@rsbuild/plugin-svgr": "^1.0.1-beta.3",
-    "@rsdoctor/rspack-plugin": "^0.3.8",
-    "babel-plugin-react-compiler": "^0.0.0-experimental-696af53-20240625",
-    "compression-webpack-plugin": "^11.1.0",
-    "generate-react-cli": "^8.4.6",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.7",
-    "rsbuild-plugin-google-analytics": "^1.0.1",
-    "rsbuild-plugin-open-graph": "^1.0.1"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
-      "biome check . --write --no-errors-on-unmatched --files-ignore-unknown=true"
-    ],
-    "src/**/*.css": [
-      "biome format . --write --no-errors-on-unmatched --files-ignore-unknown=true"
-    ]
-  }
+	"name": "client",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "rsbuild build",
+		"dev": "rsbuild dev --open",
+		"preview": "rsbuild preview",
+		"format": "biome format . --write",
+		"lint": "biome lint . --write",
+		"check": "biome check . --write",
+		"component": "generate-react component",
+		"page": "generate-react component  --type=page",
+		"layout": "generate-react component  --type=layout",
+		"redux": "generate-react component  --type=redux",
+		"generate-sitemap": "node generate-sitemap.cjs",
+		"prepare": "husky install",
+		"init-husky": "npx husky-init",
+		"test": "npx lint-staged"
+	},
+	"dependencies": {
+		"@hookform/resolvers": "^3.9.0",
+		"@reduxjs/toolkit": "^2.2.7",
+		"axios": "^1.7.7",
+		"dayjs": "^1.11.13",
+		"jwt-decode": "^4.0.0",
+		"react": "19.0.0-rc-fb9a90fa48-20240614",
+		"react-dom": "19.0.0-rc-fb9a90fa48-20240614",
+		"react-error-boundary": "^4.0.13",
+		"react-hook-form": "^7.53.0",
+		"react-redux": "^9.1.2",
+		"react-router-dom": "^6.26.2",
+		"sharp": "^0.33.5",
+		"styled-components": "^6.1.13",
+		"yup": "^1.4.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@rsbuild/plugin-babel": "^1.0.1",
+		"babel-plugin-react-compiler": "^0.0.0-experimental-696af53-20240625",
+		"@rsbuild/core": "^1.0.2",
+		"@rsbuild/plugin-image-compress": "^1.0.2",
+		"@rsbuild/plugin-react": "^1.0.1",
+		"@rsbuild/plugin-styled-components": "^1.0.1",
+		"@rsbuild/plugin-svgr": "^1.0.1",
+		"@rsdoctor/rspack-plugin": "^0.4.2",
+		"rsbuild-plugin-google-analytics": "^1.0.2",
+		"rsbuild-plugin-open-graph": "^1.0.2",
+		"million": "^3.1.11",
+		"@million/lint": "^1.0.0-rc.84",
+		"compression-webpack-plugin": "^11.1.0",
+		"generate-react-cli": "^8.4.8",
+		"husky": "^9.1.5",
+		"lint-staged": "^15.2.10"
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+			"biome check . --write --no-errors-on-unmatched --files-ignore-unknown=true"
+		],
+		"src/**/*.css": [
+			"biome format . --write --no-errors-on-unmatched --files-ignore-unknown=true"
+		]
+	}
 }

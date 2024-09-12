@@ -5,7 +5,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginStyledComponents } from '@rsbuild/plugin-styled-components';
 import { pluginSvgr } from '@rsbuild/plugin-svgr';
 
-// import { pluginLightningcss } from '@rsbuild/plugin-lightningcss';
 // import { pluginGoogleAnalytics } from 'rsbuild-plugin-google-analytics';
 // import { pluginOpenGraph } from 'rsbuild-plugin-open-graph';
 
@@ -84,7 +83,6 @@ export default defineConfig({
       { use: 'pngLossless', minQuality: 50 }, // Compress PNG images
       'ico', // Compress ICO images
     ]),
-    // pluginLightningcss(), // LightningCSS plugin for faster CSS processing
     // pluginGoogleAnalytics({
     //   // replace this with your Google tag ID
     //   // see: https://support.google.com/analytics/answer/9539598?hl=en
